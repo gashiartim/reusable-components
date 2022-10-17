@@ -1,0 +1,50 @@
+@import 'shop/resources/scss/base/constants/colors';
+@import 'shop/resources/scss/base/mixins/transitions';
+@import 'shop/resources/scss/base/mixins/typography';
+
+.tab-labels {
+    display: flex;
+}
+
+.tab-label {
+    padding: 10px 5px;
+    background-color: $color-lh-grey;
+    font-weight: 500;
+    font-size: 17px;
+    margin-right: 5px;
+    width: 100%;
+    min-width: 60px;
+    word-wrap: break-word;
+    max-width: 140px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 17px;
+    color: $color-primary;
+    cursor: pointer;
+    @include transition-default(background-color, color);
+
+    &:hover {
+        color: white;
+        background-color: $color-primary;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.disabled-tab {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.hidden-tab {
+    display: none;
+}
+
+.active-tab {
+    color: white;
+    background: $color-primary;
+}

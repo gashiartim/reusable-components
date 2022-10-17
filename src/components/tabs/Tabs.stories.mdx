@@ -1,0 +1,28 @@
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs';
+import TabsComponent from 'shop/client/components/molecules/tabs/Tabs';
+
+<Meta title="Molecules/TabsComponent" component={TabsComponent} />
+
+# TabsComponent
+
+With `MDX` we write longform markdown documentation for our `TabsComponent` component and embed Doc Blocks inline.
+
+export const Template = (args) => <TabsComponent {...args} />;
+
+export const props = {
+    children: [
+        ...[...Array(4)].map((el, index) => {
+            return (
+                <TabsComponent.Item label={`Tab-${index}`} show={true}>
+                    <div>Tab-content-{index}</div>
+                </TabsComponent.Item>
+            );
+        })
+    ]
+};
+
+<Story name="Default" args={props}>
+    {Template.bind({})}
+</Story>
+
+<ArgsTable of={TabsComponent} />

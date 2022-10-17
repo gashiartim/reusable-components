@@ -1,0 +1,12 @@
+@import 'shop/resources/scss/base/constants/colors';
+
+.labels-container {
+    display: flex;
+}
+
+.content {
+    background-color: $color-lh-grey;
+    width: 100%;
+    padding: 20px;
+    margin-top: 5px;
+}
